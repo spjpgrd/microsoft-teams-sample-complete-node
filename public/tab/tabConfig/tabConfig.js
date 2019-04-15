@@ -10,12 +10,12 @@ $(document).ready(function () {
             entityId: "test123",
             websiteUrl: createTabUrl(),
         });
-      saveEvent.notifySuccess();
+        saveEvent.notifySuccess();
     });
 
     microsoftTeams.settings.setValidityState(true);
 });
 
 function createTabUrl() {
-    return window.location.protocol + "//" + window.location.host + "/default";
+    return window.location.protocol + "//" + window.location.host + "/tab-auth/silent";
 }

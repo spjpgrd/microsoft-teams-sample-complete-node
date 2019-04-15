@@ -19,9 +19,9 @@ export class LoadingTab {
                         <script>
                             var microsoftTeams;
 
-                            $(document).ready(function () { 
+                            $(document).ready(function () {
                                 microsoftTeams.initialize();
-                            
+
                                 microsoftTeams.getContext((context) => {
                                     switch (context.subEntityId) {
                                         case 'allCommands':
@@ -31,7 +31,7 @@ export class LoadingTab {
                                             window.location = window.location.protocol + '//' + window.location.host + '/vstsAuth';
                                             break;
                                         default:
-                                            window.location = window.location.protocol + '//' + window.location.host + '/default';
+                                            window.location = window.location.protocol + '//' + window.location.host + '/tab-auth/silent';
                                     }
                                 });
                             });
